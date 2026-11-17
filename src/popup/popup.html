@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GitLab Cirillic</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <img src="icons/icon.svg" width="28" height="28" alt="" />
+      <h1>GitLab Cirillic</h1>
+    </header>
+    <p class="muted">Restore text only in repositories you enable.</p>
+    <section aria-labelledby="current-title">
+      <h2 id="current-title">Current repository</h2>
+      <p id="repository">Open a GitLab repository or merge request.</p>
+      <button id="toggle" type="button" disabled>
+        Enable for this repository
+      </button>
+      <label for="encoding">File encoding</label>
+      <select id="encoding" disabled></select>
+      <p class="hint">
+        UTF-8 and ASCII are always left unchanged. Choose an encoding if
+        auto-detection is uncertain.
+      </p>
+      <p id="status" role="status" aria-live="polite"></p>
+    </section>
+    <section aria-labelledby="allowed-title">
+      <h2 id="allowed-title">Enabled repositories</h2>
+      <p id="empty" class="muted">No repositories enabled.</p>
+      <ul id="repositories"></ul>
+    </section>
+    <footer>Files stay on your GitLab. No analytics. No changes to Git.</footer>
+    <script src="popup.js"></script>
+  </body>
+</html>

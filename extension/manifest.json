@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "GitLab Cirillic",
+  "version": "1.1.0",
+  "description": "Restore legacy-encoded text in GitLab files and diffs. Works only in repositories you explicitly enable.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{51290722-590f-4874-8799-aab805eed3d2}",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": { "required": ["none"] }
+    },
+    "gecko_android": { "strict_min_version": "142.0" }
+  },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "optional_host_permissions": ["https://*/*", "http://*/*"],
+  "background": { "scripts": ["background.js"] },
+  "action": {
+    "default_title": "GitLab Cirillic",
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon.svg"
+  },
+  "icons": { "48": "icons/icon.svg", "96": "icons/icon.svg" }
+}
