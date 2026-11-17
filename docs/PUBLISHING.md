@@ -13,8 +13,9 @@ Nothing in this project uploads, signs or publishes automatically.
 6. Supply `artifacts/gitlab-cirillic-1.1.0-source.zip` when Mozilla requests source
    code. The build bundles modules using esbuild and is not minified.
 7. Use `PRIVACY.md` for the privacy policy and the listing draft below.
-8. Add your maintainer contact, public repository URL and any desired screenshots
-   in the listing. They are intentionally not fabricated in this project.
+8. Use `docs/assets/amo-icon.png` as the listing icon (128 × 128 PNG). Add your
+   maintainer contact, public repository URL and any desired screenshots in the
+   listing.
 9. Complete Mozilla's review/signing process. A local ZIP is not a signed release.
 
 Keep the Gecko extension ID in `extension/manifest.json` stable after the first
