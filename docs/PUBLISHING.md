@@ -8,7 +8,8 @@ Nothing in this project uploads, signs or publishes automatically.
 2. Run `npm ci --ignore-scripts`, then `npm run package`.
 3. Sign in to the [Mozilla Add-ons Developer Hub](https://addons.mozilla.org/developers/).
 4. Submit a new add-on for distribution **on this site**.
-5. Upload `artifacts/gitlab-cirillic-1.1.0.zip` as the extension package.
+5. Upload `artifacts/gitlab-cirillic-1.1.0.zip` as the extension package. Select
+   Firefox desktop only; Android compatibility has not been tested.
 6. Supply `artifacts/gitlab-cirillic-1.1.0-source.zip` when Mozilla requests source
    code. The build bundles modules using esbuild and is not minified.
 7. Use `PRIVACY.md` for the privacy policy and the listing draft below.
@@ -31,6 +32,11 @@ npm run build
 tests, formatting checks and `web-ext lint`, then creates deterministic ZIPs.
 No credentials, private registry or private source repository is needed.
 The source package includes original jschardet sources in `third_party/`.
+
+The lint wrapper keeps errors and warnings fatal except for the Android-only
+minimum-version warning about `data_collection_permissions` when no Android
+support is declared. Standalone `web-ext lint` may still report that warning;
+it does not affect the supported desktop Firefox 140+ release.
 
 ## Reviewer notes
 

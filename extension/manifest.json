@@ -8,8 +8,7 @@
       "id": "{51290722-590f-4874-8799-aab805eed3d2}",
       "strict_min_version": "140.0",
       "data_collection_permissions": { "required": ["none"] }
-    },
-    "gecko_android": { "strict_min_version": "142.0" }
+    }
   },
   "permissions": ["activeTab", "scripting", "storage"],
   "optional_host_permissions": ["https://*/*", "http://*/*"],
